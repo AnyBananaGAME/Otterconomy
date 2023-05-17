@@ -46,8 +46,6 @@ module.exports = {
             const { QuickDB } = require("quick.db")
             this.db = new QuickDB({ filePath: `${dir}/json.sqlite` });
             Logger.warning("Database created!");
-
-
         }
         const eventFiles = fs
             .readdirSync(`${__dirname}/src/Events`)
@@ -55,10 +53,8 @@ module.exports = {
 
         (async() => {
             main();
-            await Commands.commandList.push([
-                require("./src/Commands/CommandBalance"),
-                require("./src/Commands/CommandAddBalance")
-            ]);
+            await Commands.commandList.push(require("./src/Commands/CommandBalance"));
+            await Commands.commandList.push(require("./src/Commands/CommandAddBalance"));
 
             for (const file of eventFiles) {
                 const event = require(`./src/Events/${file}`);
@@ -69,12 +65,5 @@ module.exports = {
                 }
             }
         })();
-
-
     }
-
-
-
-
-
 }
