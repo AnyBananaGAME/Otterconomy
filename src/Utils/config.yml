@@ -1,0 +1,5 @@
+balancecommand: You havea balance of {balance}
+noplayer: No player was provided!
+noamount: No amount has been provided!
+addbalancecommand: Added {balance} balance to {player}!
+notavalidplayer: The player is either offline or not valid!

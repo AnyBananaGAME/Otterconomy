@@ -1,0 +1,8 @@
+{
+    "name": "otterconomy",
+    "main": "Otterconomy.js",
+    "version": "0.0.1",
+    "displayName": "Otterconomy",
+    "author": "anybananagame",
+    "description": "Economy plugin"
+}
