@@ -6,6 +6,7 @@ module.exports = {
         description: "Check your balance",
         minArgs: 0,
         maxArgs: 1,
+        requiresOp: false,
     },
 
     execute(_server, player) {
@@ -21,7 +22,4 @@ module.exports = {
             player.sendMessage(message);
         })();
     }
-
-
-
 }
